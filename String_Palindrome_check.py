@@ -1,5 +1,7 @@
 Question 1 : How to check whether the string is palindrome or not 
 
+Answer:
+
 s = "madam"
 
 if s == s[::-1]:
