@@ -9,6 +9,9 @@ def letter_count(s):
         a[i]=a.get(i,0)+1
     print(a)
 
+    for key, value in a.items():
+      print(key, ":", value)
+
 if __name__ == '__main__' :
     print(letter_count("Parnab"))
     print(letter_count("Sayan"))
