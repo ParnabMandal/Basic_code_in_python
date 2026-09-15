@@ -1,6 +1,7 @@
 Question 3 : Find the letter count for a String 
 
 Answer: 
+
 def letter_count(s):
     a={}
 
