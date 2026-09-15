@@ -7,7 +7,7 @@ if s == s[::-1]:
 else:
     print("Not Palindrome")
 
-Explain : 
+""" Explain : 
 
  The Instructions: [start : stop : step]
 Whenever you use the square brackets with colons [ : : ], Python looks for three instructions:
@@ -37,4 +37,4 @@ Takes a step backward to -2 (gets the letter o)
 
 Takes a step backward to -3 (gets the letter h)
 
-...and keeps going until it runs out of letters.
+...and keeps going until it runs out of letters."""
