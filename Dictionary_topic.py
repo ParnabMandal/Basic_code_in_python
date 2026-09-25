@@ -38,6 +38,7 @@ print(result)
 
 
 ===========================================================
+
 3. Character Frequency Without Counter
 ==>
 text = "programming"
@@ -48,6 +49,7 @@ print(frequency)
 
 
 ===========================================================
+
 4. Group Employees by Department
 
 employees = [
