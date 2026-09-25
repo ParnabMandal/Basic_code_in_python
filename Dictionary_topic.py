@@ -12,6 +12,7 @@ for d in dict_list:
         result[key] = result.get(key, 0) + value
 print(result)
 
+
 ===========================================================
 
 2. Find the Second Highest Distinct Value
@@ -34,6 +35,8 @@ else:
         if score == second_highest
     ]
 print(result)
+
+
 ===========================================================
 3. Character Frequency Without Counter
 ==>
@@ -42,6 +45,7 @@ frequency = {}
 for char in text:
     frequency[char] = frequency.get(char, 0) + 1
 print(frequency)
+
 
 ===========================================================
 4. Group Employees by Department
@@ -61,3 +65,24 @@ for employee in employees:
     result.setdefault(dept, []).append(name)
 print(result)
 
+
+===========================================================
+
+5. Filter a Nested Dictionary
+employees = {
+    101: {"name": "Amit", "salary": 70000, "dept": "IT"},
+    102: {"name": "Rahul", "salary": 50000, "dept": "HR"},
+    103: {"name": "Priya", "salary": 85000, "dept": "IT"},
+    104: {"name": "Sneha", "salary": 65000, "dept": "Finance"},
+    105: {"name": "Arjun", "salary": 90000, "dept": "IT"}
+}
+
+result = {
+    emp_id: details
+    for emp_id, details in employees.items()
+    if details["dept"] == "IT"
+    and details["salary"] > 75000
+}
+print(result)
+
+===========================================================
