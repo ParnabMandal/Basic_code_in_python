@@ -121,4 +121,65 @@ for name,item in result :
 """
 
 ===========================================================
+7. Find Duplicate Values and Their Keys
+
+data = {
+"a": 10,
+"b": 20,
+"c": 10,
+"d": 30,
+"e": 20,
+"f": 40
+}
+
+group={}
+
+
+for k,v in data.items():
+    group.setdefault(v,[]).append(k)
+
+result ={key:value
+         for key,value in group.items()
+         if len(value)>1
+         }
+
+print(result)
+
++++++++++++++++++++++++++++OR+++++++++++++++++++++++++++++++
+
+The Interview Follow-Up: Fully Implemented
+--------------------------------------------
+
+In Python, dictionary keys must be immutable (hashable) types like strings, integers, or tuples. Lists are mutable, so attempting to use them as a key throws a TypeError: unhashable type: 'list'.
+Here is the complete implementation of the tuple conversion workaround mentioned in your snippet:
+
+data = {
+
+    "a": [1, 2],
+
+    "b": [3, 4],
+
+    "c": [1, 2]
+
+}
+
+grouped = {}
+
+for key, value in data.items():
+
+    # Convert list to tuple to make it hashable
+    hashable_value = tuple(value) 
+    grouped.setdefault(hashable_value, []).append(key)
+
+result = {
+
+    val: keys
+     for val, keys in grouped.items()
+     if len(keys) > 1
+}
+
+
+print(result)
+
+
 
