@@ -71,6 +71,7 @@ print(result)
 ===========================================================
 
 5. Filter a Nested Dictionary
+
 employees = {
     101: {"name": "Amit", "salary": 70000, "dept": "IT"},
     102: {"name": "Rahul", "salary": 50000, "dept": "HR"},
@@ -88,3 +89,36 @@ result = {
 print(result)
 
 ===========================================================
+6. Sort Dictionary by Multiple Conditions
+
+
+employees = {
+"Amit": {"salary": 70000, "age": 30},
+"Rahul": {"salary": 85000, "age": 28},
+"Priya": {"salary": 85000, "age": 32},
+"Sneha": {"salary": 70000, "age": 25}
+}
+
+result=sorted(
+    employees.items(),
+    key=lambda item:(-item[1]["salary"],item[1]["age"])
+)
+
+for name,item in result :
+    print(name,item)
+
+
+ """ 
+ Notes :
+ 
+ 1) employees.items() -->It actually convert the dictionary to tuple so that python can access the entire Amit": {"salary": 70000, "age": 30}
+     
+ 2) This kind of hidden format is creating inside the logic for sorting 
+            [
+    ( (-85000, 28), ("Rahul", {"salary": 85000, "age": 28}) ),
+    ( (-70000, 30), ("Amit", {"salary": 70000, "age": 30}) )
+]
+"""
+
+===========================================================
+
