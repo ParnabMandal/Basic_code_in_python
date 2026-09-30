@@ -213,3 +213,41 @@ for key in all_keys:
                        "new":new_val
                        }
 print(result)
+
+
+===========================================================
+9. Aggregate Transaction Data
+    
+==>
+
+transactions = [
+    {"customer": "A", "amount": 100},
+    {"customer": "B", "amount": 200},
+    {"customer": "A", "amount": 300},
+    {"customer": "C", "amount": 150},
+    {"customer": "B", "amount": 100},
+    {"customer": "A", "amount": 50}
+]
+
+result ={}
+
+for transaction in transactions :
+    customer=transaction["customer"]
+    amount=transaction["amount"]
+
+    if customer not in result :
+        result[customer]={"total":0,"Count":0}
+
+    result[customer]["total"]+=amount
+    result[customer]["Count"]+=1
+
+print(result)
+
+for customer in result:
+    total =result[customer]["total"]
+    count=result[customer]["Count"]
+    result[customer]["average"] =total/count
+print(result)
+
+===========================================================
+
