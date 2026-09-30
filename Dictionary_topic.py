@@ -51,7 +51,7 @@ print(frequency)
 ===========================================================
 
 4. Group Employees by Department
-
+==>
 employees = [
     {"name": "Amit", "dept": "IT"},
     {"name": "Rahul", "dept": "HR"},
@@ -71,7 +71,7 @@ print(result)
 ===========================================================
 
 5. Filter a Nested Dictionary
-
+==>
 employees = {
     101: {"name": "Amit", "salary": 70000, "dept": "IT"},
     102: {"name": "Rahul", "salary": 50000, "dept": "HR"},
@@ -90,8 +90,7 @@ print(result)
 
 ===========================================================
 6. Sort Dictionary by Multiple Conditions
-
-
+==>
 employees = {
 "Amit": {"salary": 70000, "age": 30},
 "Rahul": {"salary": 85000, "age": 28},
@@ -122,7 +121,7 @@ for name,item in result :
 
 ===========================================================
 7. Find Duplicate Values and Their Keys
-
+==>
 data = {
 "a": 10,
 "b": 20,
@@ -181,5 +180,36 @@ result = {
 
 print(result)
 
+===========================================================
+8.Find Differences Between Dictionaries
+    
+==>
+    
+old = {
+    "name": "John",
+    "age": 30,
+    "city": "Kolkata",
+    "salary": 70000
+}
+
+new = {
+    "name": "John",
+    "age": 31,
+    "city": "Bangalore",
+    "salary": 70000
+}
 
 
+all_keys =old.keys()|new.keys()
+
+result ={}
+
+for key in all_keys:
+    old_val=old.get(key)
+    new_val=new.get(key)
+    
+    if old_val!=new_val :
+        result[key]={"old":old_val,
+                       "new":new_val
+                       }
+print(result)
